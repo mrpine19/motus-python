@@ -3,19 +3,14 @@ import json
 
 def conectar_banco():
     try:
-        # with open(r'C:\Users\paulo\Desktop\credenciais.json', 'r') as arquivo:
-        #     file = json.load(arquivo)
-        #     usr = file['login']
-        #     psw = file['senha']
 
         conn = oracledb.connect(
-            user='rm566358',
-            password='fiap25',
+            user='',
+            password='',
             host='oracle.fiap.com.br',
             port=1521,
             sid='ORCL'
         )
-        print("Conexão estabelecida com sucesso!")
         return conn
 
     except FileNotFoundError:
